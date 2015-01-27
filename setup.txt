@@ -1,0 +1,13 @@
+Install gnuwin32
+	core
+	less
+	add to path
+Install nano
+	add to path
+Install git
+	add to path
+Install meld
+	no add to path
+Setup SSH
+	
+Setup .gitconfig
