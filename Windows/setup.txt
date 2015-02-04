@@ -1,13 +1,55 @@
 Install gnuwin32
 	core
 	less
-	add to path
+	Add to path
+Install Notepad++
+	It's optionnal
+		but usefull to have as a commit editor
+		screw vim on windows
 Install nano
-	add to path
+	Download nano for winnt
+		Its a zip
+	Unzip to a folder called Nano
+	Place Nano folder in C:\Program Files(x86)\
+	Add Nano to path
 Install git
-	add to path
-Install meld
-	no add to path
+	Make sure to install nothing but the bare minimum
+		No git bash, visual git or anything
+		Add man pages if available
+	It should add itself to the path
+	We need to create a home variable for it
+		aka map %userprofile% to %Home%
+		so it can find the ssh files
+	win+r->sysdm.cpl->Advanced->Environment Variables->New
+		Should be in the User variables(not system variables)
+Install Meld
+	Download, install
+	Add to path
 Setup SSH
+	Go to User profile
+		win+r->...
+	Open cmd prompt here
+		Shift right click->Open command here
+	Create .ssh folder
+		mkdir .ssh
+	exit from this shell
+	Go to c:\Program Files(x86)\
+	Open cmd prompt here
+	Generate a keypair
+		ssh-keygen -t rsa -b 4096
+			creates an ssh keypair of type RSA and bit length 4096
+			save its name something easy to spot and find, like bobo
+			do not put a password on the file
+	move bobo and bobo.pub to somewhere safe, like the Desktop
+	rename bobo and bobo.pub to id_rsa and id_rsa.pub
+	move id_rsa and id_rsa.pub to the .ssh folder in the userprofile folder
+		%userprofile%\.ssh\
+	btw, the .pub extention is used by MS Publisher
+
+Setup global .gitconfig
+	git config --global user.name "Your Name"
+	git config --global user.email "your_email@whatever.com"
+	git config --global autocrlf true
 	
-Setup .gitconfig
+	see gitconfig.txt for the rest
+		remember to set default push
